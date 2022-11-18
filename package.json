@@ -1,0 +1,41 @@
+{
+  "name": "kino",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/eslint-parser": "^7.19.1",
+    "@babel/plugin-proposal-export-default-from": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/babel__core": "^7",
+    "@types/chrome": "^0.0.200",
+    "@types/eslint": "^8",
+    "@types/prettier": "^2",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "babel-loader": "^9.1.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-babel-module": "^5.3.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.10",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-extension-manifest-plugin": "^0.8.0"
+  },
+  "scripts": {
+    "dev": "webpack --watch --mode=development",
+    "build": "webpack",
+    "lint": "eslint",
+    "lint:all": "yarn lint \"./src/**/*.{js,jsx,ts,tsx}\""
+  },
+  "packageManager": "yarn@3.2.4"
+}

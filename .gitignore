@@ -1,0 +1,9 @@
+.idea
+.vscode
+/build/
+
+# yarn2
+/.yarn/*
+.pnp.*
+!/.yarn/plugins
+!/.yarn/releases
