@@ -3,6 +3,9 @@ const webpack = require("webpack");
 const baseManifest = require("./src/manifest.json");
 const WebpackExtensionManifestPlugin = require("webpack-extension-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
+
+const smp = new SpeedMeasurePlugin();
 
 const getModeInfo = (mode) =>
   mode && mode === "development"
@@ -12,7 +15,7 @@ const getModeInfo = (mode) =>
 module.exports = (_, argv) => {
   const { isDevelop, mode } = getModeInfo(argv.mode);
 
-  return {
+  return smp.wrap({
     context: path.resolve(__dirname),
     entry: {
       pageHunter: "./src/pageHunter.ts",
@@ -28,17 +31,17 @@ module.exports = (_, argv) => {
           test: /\.((js|ts)x?)$/,
           exclude: /(node_modules)/,
           use: {
-            loader: "babel-loader",
+            loader: "swc-loader",
           },
         },
       ],
     },
-    cache: {
-      type: "filesystem",
-      buildDependencies: {
-        config: [__filename],
-      },
-    },
+    // cache: {
+    //   type: "filesystem",
+    //   buildDependencies: {
+    //     config: [__filename],
+    //   },
+    // },
     devtool: isDevelop ? "inline-source-map" : false,
     resolve: {
       extensions: [".js", ".ts", ".tsx"],
@@ -66,5 +69,5 @@ module.exports = (_, argv) => {
         },
       }),
     ],
-  };
+  });
 };

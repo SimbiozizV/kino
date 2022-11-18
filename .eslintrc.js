@@ -1,13 +1,13 @@
 module.exports = {
   extends: ["prettier", "plugin:prettier/recommended"],
-  parser: "@babel/eslint-parser",
   plugins: ["import", "prettier"],
+  parser: "@typescript-eslint/parser",
   settings: {
     "import/parsers": {
       "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
-      "babel-module": {
+      node: {
         cwd: __dirname,
         extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
