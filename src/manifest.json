@@ -1,12 +1,9 @@
 {
   "name": "kino",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Гадание кинопоиска",
   "manifest_version": 3,
   "permissions": [
-    "webRequest",
-    "activeTab",
-    "tabs",
     "scripting",
     "storage"
   ],
