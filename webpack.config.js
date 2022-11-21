@@ -36,12 +36,12 @@ module.exports = (_, argv) => {
         },
       ],
     },
-    // cache: {
-    //   type: "filesystem",
-    //   buildDependencies: {
-    //     config: [__filename],
-    //   },
-    // },
+    cache: {
+      type: "filesystem",
+      buildDependencies: {
+        config: [__filename],
+      },
+    },
     devtool: isDevelop ? "inline-source-map" : false,
     resolve: {
       extensions: [".js", ".ts", ".tsx"],

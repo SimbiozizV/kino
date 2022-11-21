@@ -8,5 +8,7 @@ export default (mode: GameMode): string => {
       return makeFramesKey();
     case GameMode.Quotes:
       return makeQuotesKey();
+    case GameMode.Descriptions:
+      return makeQuotesKey();
   }
 };

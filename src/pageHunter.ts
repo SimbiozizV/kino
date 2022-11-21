@@ -22,6 +22,7 @@ const saveResult = (result: Record<string, string>, storeKey: string) => {
 
   checkReady().then((container) => {
     console.log("ready for game");
+    console.log("store: ", storeKey);
 
     document.querySelectorAll(".game__test-answers-item").forEach((button) => {
       if (button.innerText === result[makeKeyBuyMode(gameMode)]) {
