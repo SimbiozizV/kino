@@ -10,5 +10,7 @@ export default (mode: GameMode): string => {
       return makeQuotesKey();
     case GameMode.Descriptions:
       return makeQuotesKey();
+    case GameMode.Memes:
+      return makeFramesKey();
   }
 };

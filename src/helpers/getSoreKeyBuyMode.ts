@@ -2,6 +2,7 @@ import { GameMode } from "../enums";
 import {
   DESCRIPTIONS_STORE_KEY,
   FRAME_STORE_KEY,
+  MEMES_STORE_KEY,
   QUOTES_STORE_KEY,
 } from "../constants";
 
@@ -13,5 +14,7 @@ export default (mode: GameMode): string => {
       return QUOTES_STORE_KEY;
     case GameMode.Descriptions:
       return DESCRIPTIONS_STORE_KEY;
+    case GameMode.Memes:
+      return MEMES_STORE_KEY;
   }
 };
