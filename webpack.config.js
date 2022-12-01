@@ -3,9 +3,7 @@ const webpack = require("webpack");
 const baseManifest = require("./src/manifest.json");
 const WebpackExtensionManifestPlugin = require("webpack-extension-manifest-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const SpeedMeasurePlugin = require("speed-measure-webpack-plugin");
-
-const smp = new SpeedMeasurePlugin();
+const { TimeAnalyticsPlugin } = require("time-analytics-webpack-plugin");
 
 const getModeInfo = (mode) =>
   mode && mode === "development"
@@ -15,7 +13,7 @@ const getModeInfo = (mode) =>
 module.exports = (_, argv) => {
   const { isDevelop, mode } = getModeInfo(argv.mode);
 
-  return smp.wrap({
+  return TimeAnalyticsPlugin.wrap({
     context: path.resolve(__dirname),
     entry: {
       pageHunter: "./src/pageHunter.ts",
@@ -51,18 +49,6 @@ module.exports = (_, argv) => {
       new webpack.DefinePlugin({
         __DEV__: isDevelop,
       }),
-      // new HtmlWebpackPlugin({
-      //   title: "parseUslugi",
-      //   meta: {
-      //     charset: "utf-8",
-      //     viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",
-      //     "theme-color": "#000000",
-      //   },
-      //   filename: "index.html",
-      //   template: "./src/index.html",
-      //   hash: true,
-      //   chunks: ["app"],
-      // }),
       new WebpackExtensionManifestPlugin({
         config: {
           base: baseManifest,

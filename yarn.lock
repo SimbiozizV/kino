@@ -904,7 +904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.1.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -2164,8 +2164,8 @@ __metadata:
     eslint-plugin-react: ^7.31.10
     eslint-plugin-react-hooks: ^4.6.0
     prettier: ^2.7.1
-    speed-measure-webpack-plugin: ^1.5.0
     swc-loader: ^0.2.3
+    time-analytics-webpack-plugin: ^0.1.15
     typescript: ^4.9.3
     webpack: ^5.75.0
     webpack-cli: ^5.0.0
@@ -2643,6 +2643,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ramda@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "ramda@npm:0.28.0"
+  checksum: 44ea6e5010bba70151b6a92d8114a91915e8b5a16105cce65fae58c9d7386b812c429645e35f21141d7087568550ce383bc10ee1a65cdec951f4b69ea457e6a4
+  languageName: node
+  linkType: hard
+
 "randombytes@npm:^2.1.0":
   version: 2.1.0
   resolution: "randombytes@npm:2.1.0"
@@ -2924,17 +2931,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"speed-measure-webpack-plugin@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "speed-measure-webpack-plugin@npm:1.5.0"
-  dependencies:
-    chalk: ^4.1.0
-  peerDependencies:
-    webpack: ^1 || ^2 || ^3 || ^4 || ^5
-  checksum: 5562da1e022a0c0f91dfaef362239ae110107ce1da6b9ba8ceaf16b998067ec89c96374afd049205cfa3526f8ec4551543a5c3dca3abd774b7923225a81bd24a
-  languageName: node
-  linkType: hard
-
 "string.prototype.matchall@npm:^4.0.7":
   version: 4.0.8
   resolution: "string.prototype.matchall@npm:4.0.8"
@@ -3078,6 +3074,18 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: b6937a38c80c7f84d9c11dd75e49d5c44f71d95e810a3250bd1f1797fc7117c57698204adf676b71497acc205d769d65c16ae8fa10afad832ae1322630aef10a
+  languageName: node
+  linkType: hard
+
+"time-analytics-webpack-plugin@npm:^0.1.15":
+  version: 0.1.15
+  resolution: "time-analytics-webpack-plugin@npm:0.1.15"
+  dependencies:
+    chalk: ^4.1.2
+    ramda: ^0.28.0
+  peerDependencies:
+    webpack: ^5
+  checksum: 55d264e51e3bb8a6561a276500a3c68f48725819934c9eba8ccbc09e1a7922fffda7f251f486c337005d537ffdfa12d29eef97bd47fdad7870499cea9ef7fcd9
   languageName: node
   linkType: hard
 
