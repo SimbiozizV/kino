@@ -48,7 +48,7 @@ const saveResult = (result: Record<string, string>, storeKey: string) => {
                 }, 300);
               }
             });
-          console.warn(result[currentKey]);
+          console.log(result[currentKey]);
         } else {
           const firstButton = document.querySelector(
             ".game__test-answers-item"

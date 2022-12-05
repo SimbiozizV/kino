@@ -4,6 +4,7 @@ import {
   FRAME_STORE_KEY,
   MEMES_STORE_KEY,
   QUOTES_STORE_KEY,
+  UNIVERSE_STORE_KEY,
 } from "../constants";
 
 export default (mode: GameMode): string => {
@@ -16,5 +17,7 @@ export default (mode: GameMode): string => {
       return DESCRIPTIONS_STORE_KEY;
     case GameMode.Memes:
       return MEMES_STORE_KEY;
+    case GameMode.Universe:
+      return UNIVERSE_STORE_KEY;
   }
 };
