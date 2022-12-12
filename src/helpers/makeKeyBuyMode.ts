@@ -14,5 +14,7 @@ export default (mode: GameMode): string => {
       return makeFramesKey();
     case GameMode.Universe:
       return makeQuotesKey();
+    case GameMode.Nero:
+      return makeFramesKey();
   }
 };

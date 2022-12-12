@@ -22,5 +22,6 @@ https://www.kinopoisk.ru/special/birthday19/?g=quites - Для разгадыв�
 https://www.kinopoisk.ru/special/birthday19/?g=descriptions - Для разгадывания описаний
 https://www.kinopoisk.ru/special/birthday19/?g=memes - Для разгадывания мемов
 https://www.kinopoisk.ru/special/birthday19/?g=universe - Для разгадывания вселенных
+https://www.kinopoisk.ru/special/birthday19/?g=nero - Для разгадывания нейро постеров
 ```
 

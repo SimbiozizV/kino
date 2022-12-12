@@ -4,4 +4,5 @@ export enum GameMode {
   Descriptions = "descriptions",
   Memes = "memes",
   Universe = "universe",
+  Nero = "nero",
 }

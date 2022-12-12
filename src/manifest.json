@@ -1,6 +1,5 @@
 {
   "name": "kino",
-  "version": "1.4.0",
   "description": "Гадание кинопоиска",
   "manifest_version": 3,
   "permissions": [

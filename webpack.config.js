@@ -52,6 +52,9 @@ module.exports = (_, argv) => {
       new WebpackExtensionManifestPlugin({
         config: {
           base: baseManifest,
+          extend: {
+            version: process.env.npm_package_version,
+          },
         },
       }),
     ],
